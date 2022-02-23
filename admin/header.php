@@ -3,15 +3,14 @@
 
 <head>
     <title>Aplikasi LyJo</title>
-
-    <!-- Menambahkan library DataTables -->
-
     <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
     <script type="text/javascript" src="../assets/js/jquery.js"></script>
     <script type="text/javascript" src="../assets/js/bootstrap.js"></script>
+    <!-- Menambahkan library DataTables -->
     <script type="text/javascript" src="../assets/DataTables/datatables.js"></script>
     <script type="text/javascript" src="../assets/DataTables/jquery.dataTables.js"></script>
     <link rel="stylesheet" type="text/css" href="../assets/DataTables/datatables.css">
+
     <!-- Menambahkan session pada dashboard admin -->
 
     <?php
@@ -45,10 +44,10 @@
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="index.php"><i class="glyphicon glyphicon-home"></i> Dashboard</a></li>
 
-                    <li><a href=""><i class="glyphicon glyphicon-
+                    <li><a href="user.php"><i class="glyphicon glyphicon-
 user"></i> User</a></li>
 
-                    <li><a href=""><i class="glyphicon glyphicon-tower"></i>
+                    <li><a href="outlet.php"><i class="glyphicon glyphicon-tower"></i>
                             Outlet</a></li>
                     <li><a href=""><i class="glyphicon glyphicon-folder-close"></i>
                             Paket</a></li>
@@ -76,3 +75,19 @@ log-out"></i> Log Out</a></li>
             </div>
         </div>
     </nav>
+    <!-- Menambahkan alert messages -->
+    <div class="container">
+        <div class="alert text-center">
+            <?php
+            if (isset($_GET['alert'])) {
+                if ($_GET['alert'] == "create") {
+                    echo "<div class='alert alert-success'>DATA BERHASIL DITAMBAHKAN !</div>";
+                } else if ($_GET['alert'] == "update") {
+                    echo "<div class='alert alert-warning'>DATA BERHASIL DIUPDATE !</div>";
+                } else if ($_GET['alert'] == "delete") {
+                    echo "<div class='alert alert-danger'>DATA BERHASIL DIHAPUS !</div>";
+                }
+            }
+            ?>
+        </div>
+    </div>

@@ -5,8 +5,7 @@
             <h4>Data User</h4>
         </div>
         <div class="panel-body">
-            <br />
-            <br />
+            <a href="useradd" class="btn btn-sm btn-info pull-right">Tambah User</a><br><br>
             <table class="table table-bordered table-striped table-hover" id="table-datatable">
                 <thead>
                     <tr>
@@ -38,8 +37,9 @@
                             <td><?php echo $d['level']; ?></td>
                             <td><?php echo $d['id_outlet']; ?></td>
                             <td>
-                                <a href="" class="btn btn-sm btn-info">Edit</a>
-                                <a href="" class="btn btn-sm btn-danger">Hapus</a>
+                                <a href="useredit.php?id=<?php echo $d['id_user']; ?>" class="btn btn-sm btn-info">Edit</a>
+                                <a href="#" onClick="confirm_modal('userdelete.php?id=<?php echo $d['id_user']; ?>');" class="btn btn-sm btn-danger">Hapus</a>
+
                             </td>
                         </tr>
 
