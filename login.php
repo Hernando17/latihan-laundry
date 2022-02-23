@@ -1,4 +1,5 @@
 <?php
+session_start();
 // menghubungkan dengan koneksi
 include 'koneksi.php';
 // menangkap data yang dikirim dari form
@@ -16,6 +17,7 @@ if ($cek > 0) {
     $data = mysqli_fetch_assoc($login);
     //membuat algoritma untuk membedakan data level user sebagai bahan penentuan login
     if ($data['level'] == "admin") {
+        $_SESSION['status'] = "admin_login";
         header("location:admin/");
     } else if ($data['level'] == "kasir") {
         header("location:kasir/");
