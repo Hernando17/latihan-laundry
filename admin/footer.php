@@ -34,5 +34,17 @@
         document.getElementById('delete_link').setAttribute('href', delete_url);
     }
 </script>
+<!-- membuat form dinamis pada fitur transaksi -->
+<script>
+    $(document).ready(function() {
+        $('#dinamis .add-row').click(function() {
+            var template = '<tr><td><input class="form-control" type="text" name = "jenis_pakaian[]" ></td><td><input class="form-control" type="text" name = "jumlah_pakaian[]"></td><td><button type="button" class="btn btn-danger delete-row">-</button></td></tr>';
+            $('#dinamis tbody').append(template);
+        });
+        $('#dinamis').on('click', '.delete-row', function() {
+            $(this).parent().parent().remove();
+        });
+    });
+</script>
 
-</html>
+< /html>

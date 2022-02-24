@@ -54,7 +54,7 @@ user"></i> User</a></li>
                     <li><a href=""><i class="glyphicon glyphicon-sunglasses"></i>
                             Pelanggan</a></li>
 
-                    <li><a href=""><i class="glyphicon glyphicon-shopping-
+                    <li><a href="transaksi.php"><i class="glyphicon glyphicon-shopping-
 cart"></i> Transaksi</a></li>
 
                     <li><a href=""><i class="glyphicon glyphicon-usd"></i>
