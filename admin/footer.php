@@ -38,7 +38,7 @@
 <script>
     $(document).ready(function() {
         $('#dinamis .add-row').click(function() {
-            var template = '<tr><td><input class="form-control" type="text" name = "jenis_pakaian[]" ></td><td><input class="form-control" type="text" name = "jumlah_pakaian[]"></td><td><button type="button" class="btn btn-danger delete-row">-</button></td></tr>';
+            var template = '<tr><td><input class="form-control" type="text" name = "jenis_pakaian[]" ></td><td><input class="form-control" type="text" name = "jumlah_pakaian[]"></td><td><button type="button" class ="btn btn-blue add-row">+</button><button type="button" class ="btn btn-danger delete-row">-</button></td >';
             $('#dinamis tbody').append(template);
         });
         $('#dinamis').on('click', '.delete-row', function() {
@@ -47,4 +47,4 @@
     });
 </script>
 
-< /html>
+</html>

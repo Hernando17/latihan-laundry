@@ -78,12 +78,11 @@ tb_user.id_user=tb_transaksi.id_user");
                                     ?>
                                 </td>
                                 <td>
-                                    <a href="invoice.php?id=<?php echo
-
-                                                            $d['id_transaksi']; ?>" target="_blank" class="btn btn-sm btn-success">Invoice</a>
-                                    <a href="edit.php?id=<?php echo
-                                                            $d['id_transaksi']; ?>" class="btn btn-sm btn-warning">Edit</a>
-                                    <a href="#" onClick="confirm_modal('delete.php?id=<?php echo $d['id_transaksi']; ?>');" class="btn btn-sm btn-danger">Batal</a>
+                                    <a href="transaksiinvoice.php?id=<?php echo $d['id_transaksi']; ?>" target="_blank" class="btn btn-sm btn-success">Invoice</a>
+                                    <a href="transaksiedit.php?id=<?php echo
+                                                                    $d['id_transaksi']; ?>" class="btn btn-sm btn-warning">Edit</a>
+                                    <a href="#" onClick="confirm_modal('transaksidelete.php?id=<?php echo
+                                                                                                $d['id_transaksi']; ?>');" class="btn btn-sm btn-danger">Batal</a>
                                 </td>
                             </tr>
                         <?php
